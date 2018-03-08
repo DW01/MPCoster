@@ -37,7 +37,7 @@ namespace MPLib.Components
                 // Damage multiplier below 2.0.
                 // Also add check for zero-or-lower DamageMults,
                 // since this is impossible.
-                if (DamageMult < 2.0f && DamageMult > 0.0f)
+                if (DamageMult < 2.0f & DamageMult > 0.0f)
                 {
                     IntermediateOutput = (10 * DamageMult) - 10;
                 }
