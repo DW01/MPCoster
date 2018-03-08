@@ -43,10 +43,15 @@ namespace MPLib.Components
                 }
 
                 // Damage multiplier 2.0 or above.
-                else
+                else if (DamageMult >= 2.0f)
                 {
                     IntermediateOutput = (20 * DamageMult) - 28;
                 }
+
+                // Throw an exception otherwise because
+                // we can't have anything else, dum-dum!
+                else throw new InvalidOperationException("Multiplier can't be less than 0%!");
+
                 FinalOutput = IntermediateOutput;
             }
 
