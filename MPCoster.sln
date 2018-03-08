@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27421.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MPCoster", "MPCoster\MPCoster.csproj", "{8DD129D9-6E59-456E-A5BB-36613F88630B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MPLib", "MPLib\MPLib.csproj", "{3FB4B236-AE31-474C-A0A7-A4D97F5A00F0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{8DD129D9-6E59-456E-A5BB-36613F88630B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8DD129D9-6E59-456E-A5BB-36613F88630B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8DD129D9-6E59-456E-A5BB-36613F88630B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3FB4B236-AE31-474C-A0A7-A4D97F5A00F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3FB4B236-AE31-474C-A0A7-A4D97F5A00F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3FB4B236-AE31-474C-A0A7-A4D97F5A00F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3FB4B236-AE31-474C-A0A7-A4D97F5A00F0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
