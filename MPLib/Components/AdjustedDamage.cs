@@ -50,7 +50,7 @@ namespace MPLib.Components
 
                 // Throw an exception otherwise because
                 // we can't have anything else, dum-dum!
-                else throw new InvalidOperationException("Multiplier can't be less than 0%!");
+                else throw new InvalidOperationException("Multiplier can't be zero or less!");
 
                 FinalOutput = IntermediateOutput;
             }
@@ -58,9 +58,22 @@ namespace MPLib.Components
             // Is damage type piercing?
             else if (DamageType == DamageTypes.Piercing)
             {
-                // Damage Calcs.
-                IntermediateOutput = ((40 * DamageMult) - 4) / 3;
-                FinalOutput = IntermediateOutput;
+                // Calculate damage for Piercing =< 100%.
+                if (DamageMult <= 1.0f & DamageMult > 0.0f)
+                {
+                    IntermediateOutput = ((40 * DamageMult) - 4) / 3;
+                    FinalOutput = IntermediateOutput;
+                }
+
+                // Exceedingly rare case, but one we need to handle anyway.
+                else if (DamageMult >= 1.05f)
+                {
+                    IntermediateOutput = ((20 * DamageMult) - 8) + (((DamageMult - 1) * 5) * 4);
+                    FinalOutput = IntermediateOutput;
+                }
+
+                // Dum-dum scenario #2.
+                else throw new InvalidOperationException("Multiplier can't be zero or less!");
             }
 
             // Is damage type destruct?
