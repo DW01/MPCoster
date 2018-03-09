@@ -22,10 +22,10 @@ namespace MPLib.Components
         public DamageTypes DamageType;
 
         // Intermediate output.
-        float IntermediateOutput;
+        public float IntermediateOutput;
 
         // Final output variable.
-        float FinalOutput;
+        public float FinalOutput;
 
         // Basic damage calculation method.
         // Uses multipliers instead of percentages for more readable calcs.
@@ -61,14 +61,14 @@ namespace MPLib.Components
                 // Calculate damage for Piercing =< 100%.
                 if (DamageMult <= 1.0f & DamageMult > 0.0f)
                 {
-                    IntermediateOutput = ((40 * DamageMult) - 4) / 3;
+                    IntermediateOutput = (15 * DamageMult) - 3;
                     FinalOutput = IntermediateOutput;
                 }
 
                 // Exceedingly rare case, but one we need to handle anyway.
                 else if (DamageMult >= 1.05f)
                 {
-                    IntermediateOutput = ((20 * DamageMult) - 8) + (((DamageMult - 1) * 5) * 4);
+                    IntermediateOutput = (32 * DamageMult) - 20;
                     FinalOutput = IntermediateOutput;
                 }
 

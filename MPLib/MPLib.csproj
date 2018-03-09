@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Components\AdjustedDamage.cs" />
+    <Compile Include="Components\AdjustedRange.cs" />
     <Compile Include="Components\ValueCaps.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
