@@ -11,5 +11,6 @@ namespace MPLib.Components
     // spit out MP cost contributor.
     class AdjustedRange
     {
+        
     }
 }
