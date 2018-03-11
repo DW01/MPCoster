@@ -17,9 +17,6 @@ namespace MPLib.Components
             Piercing
         }
 
-        // Damage types reference.
-        public DamageTypes DamageType;
-
         // Intermediate output.
         public float IntermediateOutput;
 
@@ -32,7 +29,7 @@ namespace MPLib.Components
 
         // Basic damage calculation method.
         // Uses multipliers instead of percentages for more readable calcs.
-        public float CalculateAdjustedDamage(float DamageMult)
+        public float CalculateAdjustedDamage(float DamageMult, DamageTypes DamageType)
         {
 
             // Refactor part of if-else linguini into a switch statement.
@@ -190,6 +187,12 @@ namespace MPLib.Components
                     }
 
                     break;
+
+                // Should never actually reach this, but juuust in case...
+                default:
+
+                    // ... here's the final dum-dum scenario.
+                    throw new InvalidOperationException("Damage type can't be none!");
             }
 
             return FinalOutput;
