@@ -10,20 +10,24 @@ namespace MPLib.Components
     // We'll have various methods here to account for Piercing, etc..
     class AdjustedDamage
     {
+        #region DAMAGE_TYPE_ENUM
         // Damage type enumerator.
         public enum DamageTypes
         {
             Normal,
             Piercing
         }
+        #endregion
 
+        #region GLOBALS
         // Intermediate output.
         public float IntermediateOutput;
 
         // Final output variable.
         public float FinalOutput;
+        #endregion
 
-
+        #region ADJ_DAMAGE_CALC
         // Basic damage calculation method.
         // Uses multipliers instead of percentages for more readable calcs.
         public float CalculateAdjustedDamage(float DamageMult, DamageTypes DamageType, bool IsDestructDamage)
@@ -194,5 +198,6 @@ namespace MPLib.Components
 
             return FinalOutput;
         }
+        #endregion
     }
 }
