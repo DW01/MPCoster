@@ -23,13 +23,10 @@ namespace MPLib.Components
         // Final output variable.
         public float FinalOutput;
 
-        // Destruct modifier.
-        public bool IsDestructDamage;
-
 
         // Basic damage calculation method.
         // Uses multipliers instead of percentages for more readable calcs.
-        public float CalculateAdjustedDamage(float DamageMult, DamageTypes DamageType)
+        public float CalculateAdjustedDamage(float DamageMult, DamageTypes DamageType, bool IsDestructDamage)
         {
 
             // Refactor part of if-else linguini into a switch statement.
